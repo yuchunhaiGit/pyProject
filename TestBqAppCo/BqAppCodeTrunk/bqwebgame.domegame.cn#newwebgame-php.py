@@ -9,7 +9,7 @@
 # cnpm run prod
 
 import os
-Dir = r'D:\pyTools\BqAppCodeTrunk\bqwebgame(ba).domegame.cn'
+Dir = r'D:\yuchunhaiGit\BqAppCodeTrunk\bqwebgame(ba).domegame.cn'
 # os.mkdir(Dir)
 # os.chdir(Dir)
 # os.system(r'svn co https://192.168.69.225/svn/newwebgame-php/trunk/webgame')

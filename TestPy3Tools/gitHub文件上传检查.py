@@ -21,4 +21,4 @@ browser.find_element_by_xpath('//*[@id="your_repos"]/div/div[2]/ul/li/a/span/spa
 time.sleep(2)
 browser.refresh()
 time.sleep(5)
-browser.quit()
+# browser.quit()
