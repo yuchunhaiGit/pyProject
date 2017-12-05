@@ -1,0 +1,6 @@
+如果调用 print()或 len()函数，你会传入一些值，放在括号之间，在这里称为“参
+数”。也可以自己定义接收参数的函数。
+def hello(name):
+ print('Hello ' + name)
+ hello('Alice')
+hello('Bob')

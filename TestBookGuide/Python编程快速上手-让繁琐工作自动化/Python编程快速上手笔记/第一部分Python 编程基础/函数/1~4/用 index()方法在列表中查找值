@@ -1,0 +1,20 @@
+列表值有一个 index()方法，可以传入一个值，如果该值存在于列表中，就返回它
+的下标。如果该值不在列表中，Python 就报ValueError。在交互式环境中输入以下代码：
+spam = ['hello', 'hi', 'howdy', 'heyas']
+>>> spam.index('hello')
+0
+>>> spam.index('heyas')
+3
+>>> spam.index('howdy howdy howdy')
+Traceback (most recent call last):
+File "<pyshell#31>", line 1, in <module>
+spam.index('howdy howdy howdy')
+ValueError: 'howdy howdy howdy' is not in list
+如果列表中存在重复的值，就返回它第一次出现的下标。在交互式环境中输入
+以下代码，注意 index()返回 1，而不是 3：
+>>> spam = ['Zophie', 'Pooka', 'Fat-tail', 'Pooka']
+>>> spam.index('Pooka')
+1
+
+yu = ["A","B","C","A"]
+print(yu.index('A'))

@@ -1,0 +1,17 @@
+像列表一样，“字典”是许多值的集合。但不像列表的下标，字典的索引可以
+使用许多不同数据类型，不只是整数。字典的索引被称为“键”，键及其关联的值
+称为“键-值”对。
+在代码中，字典输入时带花括号{}。在交互式环境中输入以下代码：
+>>> myCat = {'size': 'fat', 'color': 'gray', 'disposition': 'loud'}
+这将一个字典赋给 myCat 变量。这个字典的键是'size'、'color'和'disposition'。这
+些键相应的值是'fat'、'gray'和'loud'。可以通过它们的键访问这些值：
+>>> myCat['size']
+'fat'
+>>> 'My cat has ' + myCat['color'] + ' fur.'
+'My cat has gray fur.'
+字典仍然可以用整数值作为键，就像列表使用整数值作为下标一样，但它们不
+必从 0 开始，可以是任何数字。
+>>> spam = {12345: 'Luggage Combination', 42: 'The Answer'}
+
+myCat = {'size':'fat','color':'gray','disposition':'loud'}
+print(myCat['size'])

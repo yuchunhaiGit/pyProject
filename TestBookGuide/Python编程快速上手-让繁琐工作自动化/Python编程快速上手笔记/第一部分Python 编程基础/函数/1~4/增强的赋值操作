@@ -1,0 +1,8 @@
+针对+、-、*、/和%操作符，都有增强的赋值操作符，如表 4-1 所示。
+表 4-1 增强的赋值操作符
+增强的赋值语句  等价的赋值语句
+spam += 1  spam = spam + 1
+spam -= 1  spam = spam - 1
+spam *= 1  spam = spam * 1
+spam /= 1  spam = spam / 1
+spam %= 1  spam = spam % 1

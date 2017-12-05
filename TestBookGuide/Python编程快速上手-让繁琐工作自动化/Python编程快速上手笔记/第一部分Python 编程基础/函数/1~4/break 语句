@@ -1,0 +1,8 @@
+有一个捷径，让执行提前跳出 while 循环子句。如果执行遇到 break 语句，就
+会马上退出 while 循环子句。在代码中，break 语句仅包含 break 关键字。
+while True:
+	print('Please type your name.')
+ 	name = input()
+ 	if name == 'your name':
+ 		break
+print('Thank you!')

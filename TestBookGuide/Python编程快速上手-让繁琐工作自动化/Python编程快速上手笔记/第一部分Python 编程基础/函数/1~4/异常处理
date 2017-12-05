@@ -1,0 +1,27 @@
+函数作为“黑盒”
+通常，对于一个函数，你要知道的就是它的输入值（变元）和输出值。
+你并非总是需要加重自己的负担，弄清楚函数的代码实际是怎样工作的。
+如果以这种高层的方式来思考函数，通常大家会说，你将该函数看成是一
+个黑盒。
+这个思想是现代编程的基础。本书后面的章节将向你展示一些模块，其中
+的函数是由其他人编写的。尽管你在好奇的时候也可以看一看源代码，但为了
+能使用它们，你并不需要知道它们是如何工作的。而且，因为鼓励在编写函数
+时不使用全局变量，你通常也不必担心函数的代码会与程序的其他部分发生交
+叉影响。
+错误可以由 try 和 except 语句来处理。那些可能出错的语句被放在 try 子句中。
+如果错误发生，程序执行就转到接下来的 except 子句开始处。
+def spam(divideBy):
+	try:
+		return 42 / divideBy
+	except ZeroDivisionError:
+		print('Error: Invalid argument.')
+		
+def spam(divideBy):
+	return 42 / divideBy
+try:
+	print(spam(2))
+	print(spam(12))
+	print(spam(0))
+	print(spam(1))
+except ZeroDivisionError:
+	print('Error: Invalid argument.')

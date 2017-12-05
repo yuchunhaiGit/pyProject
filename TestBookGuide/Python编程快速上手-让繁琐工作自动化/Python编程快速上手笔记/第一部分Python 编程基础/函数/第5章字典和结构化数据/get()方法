@@ -1,0 +1,23 @@
+在访问一个键的值之前，检查该键是否存在于字典中，这很麻烦。好在，字典有一
+个get()方法，它有两个参数：要取得其值的键，以及如果该键不存在时，返回的备用值。
+在交互式环境中输入以下代码：
+>>> picnicItems = {'apples': 5, 'cups': 2}
+>>> 'I am bringing ' + str(picnicItems.get('cups', 0)) + ' cups.'
+'I am bringing 2 cups.'
+>>> 'I am bringing ' + str(picnicItems.get('eggs', 0)) + ' eggs.'
+'I am bringing 0 eggs.'
+因为 picnicItems 字典中没有'egg'键，get()方法返回的默认值是 0。不使用 get()，
+代码就会产生一个错误消息，就像下面的例子：
+>>> picnicItems = {'apples': 5, 'cups': 2}
+>>> 'I am bringing ' + str(picnicItems['eggs']) + ' eggs.'
+Traceback (most recent call last):
+File "<pyshell#34>", line 1, in <module>
+'I am bringing ' + str(picnicItems['eggs']) + ' eggs.'
+KeyError: 'eggs'
+
+
+
+birthdays = {'Alice': 'Apr 1', 'Bob': 'Dec 12', 'Carol': 'Mar 4'}
+print(birthdays.get('Alice',123))
+print(birthdays.get('yu1'))
+print(birthdays.get('yu',123))

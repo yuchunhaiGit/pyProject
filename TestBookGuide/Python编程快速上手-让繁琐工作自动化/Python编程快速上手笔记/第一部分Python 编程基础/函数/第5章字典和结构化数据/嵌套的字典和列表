@@ -1,0 +1,54 @@
+对井字棋盘建模相当简单：棋盘只需要一个字典，包含 9 个键值对。当你对复
+杂的事物建模时，可能发现字典和列表中需要包含其他字典和列表。列表适用于包
+含一组有序的值，字典适合于包含关联的键与值。例如，下面的程序使用字典包含
+其他字典，用于记录谁为野餐带来了什么食物。totalBrought()函数可以读取这个数
+据结构，计算所有客人带来的食物的总数。
+allGuests = {'Alice': {'apples': 5, 'pretzels': 12},
+'Bob': {'ham sandwiches': 3, 'apples': 2},
+'Carol': {'cups': 3, 'apple pies': 1}}
+def totalBrought(guests, item):
+numBrought = 0
+ for k, v in guests.items():
+ numBrought = numBrought + v.get(item, 0)
+return numBrought
+print('Number of things being brought:')
+print(' - Apples ' + str(totalBrought(allGuests, 'apples')))
+print(' - Cups ' + str(totalBrought(allGuests, 'cups')))
+print(' - Cakes ' + str(totalBrought(allGuests, 'cakes')))
+print(' - Ham Sandwiches ' + str(totalBrought(allGuests, 'ham sandwiches')))
+print(' - Apple Pies ' + str(totalBrought(allGuests, 'apple pies')))
+在 totalBrought()函数中，for 循环迭代 guests 中的每个键值对。在这个循环里，
+客人的名字字符串赋给 k，他们带来的野餐食物的字典赋给 v。如果食物参数是字
+典中存在的键，它的值（数量）就添加到 numBrought。如果它不是键，get()方法
+就返回 0，添加到 numBrought。
+该程序的输出像这样：
+Number of things being brought:
+- Apples 7
+- Cups 3
+- Cakes 0
+- Ham Sandwiches 3
+- Apple Pies 1
+这似乎对一个非常简单的东西建模，你可能认为不需要费事去写一个程序来做
+到这一点。但是要认识到，这个函数 totalBrought()可以轻易地处理一个字典，其中
+包含数千名客人，每个人都带来了“数千种”不同的野餐食物。这样用这种数据结
+构来保存信息，并使用 totalBrought()函数，就会节约大量的时间！
+你可以用自己喜欢的任何方法，用数据结构对事物建模，只要程序中其他代码能够
+正确处理这个数据模型。在刚开始编程时，不需要太担心数据建模的“正确”方式。随
+着经验增加，你可能会得到更有效的模型，但重要的是，该数据模型符合程序的需要。
+
+
+
+allGuests = {'Alice': {'apples': 5, 'pretzels': 12},
+             'Bob': {'ham sandwiches': 3, 'apples': 2},
+             'Carol': {'cups': 3, 'apple pies': 1}}
+def totalBrought(guests, item):
+    numBrought = 0
+    for k, v in guests.items():
+        numBrought = numBrought + v.get(item, 0)
+    return numBrought
+print('Number of things being brought:')
+print(' - Apples ' + str(totalBrought(allGuests, 'apples')))
+print(' - Cups ' + str(totalBrought(allGuests, 'cups')))
+print(' - Cakes ' + str(totalBrought(allGuests, 'cakes')))
+print(' - Ham Sandwiches ' + str(totalBrought(allGuests, 'ham sandwiches')))
+print(' - Apple Pies ' + str(totalBrought(allGuests, 'apple pies')))

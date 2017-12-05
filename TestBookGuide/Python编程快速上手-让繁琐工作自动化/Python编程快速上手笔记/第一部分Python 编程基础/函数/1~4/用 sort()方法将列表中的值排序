@@ -1,0 +1,47 @@
+数值的列表或字符串的列表，能用 sort()方法排序。例如，在交互式环境中输
+入以下代码：
+>>> spam = [2, 5, 3.14, 1, -7]
+>>> spam.sort()
+>>> spam
+[-7, 1, 2, 3.14, 5]
+>>> spam = ['ants', 'cats', 'dogs', 'badgers', 'elephants']
+>>> spam.sort()
+>>> spam
+['ants', 'badgers', 'cats', 'dogs', 'elephants']
+也可以指定 reverse 关键字参数为 True，让 sort()按逆序排序。在交互式环境中
+输入以下代码：
+>>> spam.sort(reverse=True)
+>>> spam
+['elephants', 'dogs', 'cats', 'badgers', 'ants']
+关于 sort()方法，你应该注意 3 件事。首先，sort()方法当场对列表排序。不要
+写出 spam = spam.sort()这样的代码，试图记录返回值。
+其次，不能对既有数字又有字符串值的列表排序，因为 Python 不知道如何比较
+它们。在交互式环境中输入以下代码，注意 TypeError 错误：
+>>> spam = [1, 3, 2, 4, 'Alice', 'Bob']
+>>> spam.sort()
+Traceback (most recent call last):
+File "<pyshell#70>", line 1, in <module>
+spam.sort()
+TypeError: unorderable types: str() < int()
+第三，sort()方法对字符串排序时，使用“ASCII 字符顺序”，而不是实际的字
+典顺序。这意味着大写字母排在小写字母之前。因此在排序时，小写的 a 在大写的
+Z 之后。例如，在交互式环境中输入以下代码：
+>>> spam = ['Alice', 'ants', 'Bob', 'badgers', 'Carol', 'cats']
+>>> spam.sort()
+>>> spam
+['Alice', 'Bob', 'Carol', 'ants', 'badgers', 'cats']
+如果需要按照普通的字典顺序来排序，就在 sort()方法调用时，将关键字参数
+key 设置为 str.lower。
+>>> spam = ['a', 'z', 'A', 'Z']
+>>> spam.sort(key=str.lower)
+>>> spam
+['a', 'A', 'z', 'Z']
+这将导致 sort()方法将列表中所有的表项当成小写，但实际上并不会改变它们
+在列表中的值。
+
+yu = ["A","B","C","A","F","A"]
+yu.sort()
+print(yu)
+yu.sort(key=None, reverse=True)
+print(yu)
+

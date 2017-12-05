@@ -1,0 +1,19 @@
+要在列表中添加新值，就使用 append()和 insert()方法。在交互式环境中输入以
+下代码，对变量 spam 中的列表调用 append()方法：
+>>> spam = ['cat', 'dog', 'bat']
+>>> spam.append('moose')
+>>> spam
+['cat', 'dog', 'bat', 'moose']
+前面的 append()方法调用，将参数添加到列表末尾。insert()方法可以在列表任
+意下标处插入一个值。insert()方法的第一个参数是新值的下标，第二个参数是要插
+入的新值。在交互式环境中输入以下代码：
+>>> spam = ['cat', 'dog', 'bat']
+>>> spam.insert(1, 'chicken')
+>>> spam
+['cat', 'chicken', 'dog', 'bat']
+
+yu = ["A","B","C"]
+yu.append("D")
+print(yu)
+yu.insert(1, "E")
+print(yu)

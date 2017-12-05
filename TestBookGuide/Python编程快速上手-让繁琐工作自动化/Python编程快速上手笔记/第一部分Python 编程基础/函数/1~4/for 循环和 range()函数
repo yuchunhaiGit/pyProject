@@ -1,0 +1,13 @@
+在条件为 True 时，while 循环就会继续循环（这是它的名称的由来）。但如果你
+想让一个代码块执行固定次数，该怎么办？可以通过 for 循环语句和 range()函数来
+实现。
+在代码中，for 语句看起来像 for i in range(5):这样，总是包含以下部分：
+ for 关键字；
+ 一个变量名；
+ in 关键字；
+ 调用 range()方法，最多传入 3 个参数；
+ 冒号；
+ 从下一行开始，缩退的代码块（称为 for 子句）。
+print('My name is')
+for i in range(5):
+	print('Jimmy Five Times (' + str(i) + ')')

@@ -1,0 +1,2 @@
+print()函数将括号内的字符串显示在屏幕上
+print('Hello world!')

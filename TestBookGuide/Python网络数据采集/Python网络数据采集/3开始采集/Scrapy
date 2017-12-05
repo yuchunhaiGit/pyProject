@@ -1,0 +1,6 @@
+官网
+https://scrapy.org/download/
+安装
+
+F:\yuchunhaiCode\Portable Python 2.7.6.1\App\yutools\scrapy-master>
+python setup.py install

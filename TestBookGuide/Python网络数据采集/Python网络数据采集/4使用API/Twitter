@@ -1,0 +1,5 @@
+¹ÙÍø
+http://mike.verdone.ca/twitter/#downloads
+
+cd F:\yuchunhaiCode\Portable Python 2.7.6.1\App\yutools\twitter-1.17.1
+python setup.py install

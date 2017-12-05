@@ -1,0 +1,4 @@
+if 语句的子句（也就是紧跟 if 语句的语句块），
+将在语句的条件为 True 时执行。如果条件为 False，子句将跳过。
+if name == 'Alice':
+	print('Hi, Alice.')

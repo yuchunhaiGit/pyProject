@@ -1,0 +1,13 @@
+一般情况下，赋值语句左边是一个变量名，就像 spam = 4。但是，也可以使用
+列表的下标来改变下标处的值。例如，spam[1] = 'aardvark'意味着“将列表 spam 下
+标 1 处的值赋值为字符串'aardvark'。在交互式环境中输入以下代码：
+>>> spam = ['cat', 'bat', 'rat', 'elephant']
+>>> spam[1] = 'aardvark'
+>>> spam
+['cat', 'aardvark', 'rat', 'elephant']
+>>> spam[2] = spam[1]
+>>> spam
+['cat', 'aardvark', 'aardvark', 'elephant']
+>>> spam[-1] = 12345
+>>> spam
+['cat', 'aardvark', 'aardvark', 12345]

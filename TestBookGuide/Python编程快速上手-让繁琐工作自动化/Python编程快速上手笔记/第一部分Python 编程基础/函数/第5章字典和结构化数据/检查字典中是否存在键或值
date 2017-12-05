@@ -1,0 +1,17 @@
+回忆一下，前一章提到，in 和 not in 操作符可以检查值是否存在于列表中。也
+可以利用这些操作符，检查某个键或值是否存在于字典中。在交互式环境中输入以
+下代码：
+>>> spam = {'name': 'Zophie', 'age': 7}
+>>> 'name' in spam.keys()
+True
+>>> 'Zophie' in spam.values()
+True
+>>> 'color' in spam.keys()
+False
+>>> 'color' not in spam.keys()
+True
+>>> 'color' in spam
+False
+请注意，在前面的例子中，'color' in spam 本质上是一个简写版本。相当于'color'
+in spam.keys()。这种情况总是对的：如果想要检查一个值是否为字典中的键，就可
+以用关键字 in（或 not in），作用于该字典本身。

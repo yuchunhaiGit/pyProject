@@ -1,0 +1,13 @@
+一个常见的 Python 技巧，是在 for 循环中使用 range(len(someList))，迭代列表
+的每一个下标。例如，在交互式环境中输入以下代码：
+>>> supplies = ['pens', 'staplers', 'flame-throwers', 'binders']
+>>> for i in range(len(supplies)):
+print('Index ' + str(i) + ' in supplies is: ' + supplies[i])
+Index 0 in supplies is: pens
+Index 1 in supplies is: staplers
+Index 2 in supplies is: flame-throwers
+Index 3 in supplies is: binders
+
+spam = [["1","2","3","4","5","6","7","8"],["A","B","C","D","E"]]
+for i in range(len(spam[1])):
+    print('Index ' + str(i) + ' in supplies is: ' + spam[1][i])

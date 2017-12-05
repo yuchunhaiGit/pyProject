@@ -1,0 +1,14 @@
+像 break 语句一样，continue 语句用于循环内部。如果程序执行遇到 continue
+语句，就会马上跳回到循环开始处，重新对循环条件求值（这也是执行到达循环末
+尾时发生的事情）。
+
+while True:
+    print('Who are you?')
+    name = input()
+    if name != 'Joe':
+        continue
+    print('Hello, Joe. What is the password? (It is a fish.)')
+    password = input()
+    if password == '111111':
+        break
+print('Access granted.')

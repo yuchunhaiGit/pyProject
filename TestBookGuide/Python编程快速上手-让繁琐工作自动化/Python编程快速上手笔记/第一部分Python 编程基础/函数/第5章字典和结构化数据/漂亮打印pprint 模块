@@ -1,0 +1,27 @@
+如果程序中导入 pprint 模块，就可以使用 pprint()和 pformat()函数，它们将“漂亮
+打印”一个字典的字。如果想要字典中表项的显示比print()的输出结果更干净，这就有
+用了。修改前面的 characterCount.py 程序，将它保存为prettyCharacterCount.py。
+import pprint
+message = 'It was a bright cold day in April, and the clocks were striking
+thirteen.'
+count = {}
+for character in message:
+count.setdefault(character, 0)
+count[character] = count[character] + 1
+pprint.pprint(count)
+这一次，当程序运行时，输出看起来更干净，键排过序。
+如果字典本身包含嵌套的列表或字典，pprint.pprint()函数就特别有用。
+如果希望得到漂亮打印的文本作为字符串，而不是显示在屏幕上，那就调用
+pprint.pformat()。下面两行代码是等价的：
+pprint.pprint(someDictionaryValue)
+print(pprint.pformat(someDictionaryValue))
+
+
+import pprint
+message = 'It was a bright cold day in April, and the clocks were striking thirteen.'
+count = {}
+for character in message:
+    count.setdefault(character, 0)
+    count[character] = count[character] + 1
+print(count)
+pprint.pprint(count)

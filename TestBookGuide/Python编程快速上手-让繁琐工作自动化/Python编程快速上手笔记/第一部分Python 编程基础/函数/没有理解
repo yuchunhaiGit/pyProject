@@ -1,0 +1,45 @@
+3.2 返回值和 return 语句
+3.3 None 值
+3.4 关键字参数和 print()
+第3章 函数
+3.11 实践项目异常处理
+
+4.5 例子程序：神奇 8 球和列表
+前一章我们写过神奇 8 球程序。利用列表，可以写出更优雅的版本。不是用一
+些几乎一样的 elif 语句，而是创建一个列表，针对它编码。打开一个新的文件编辑
+器窗口，输入以下代码，并保存为 magic8Ball2.py：
+import random
+messages = ['It is certain',
+'It is decidedly so',
+'Yes definitely',
+'Reply hazy try again',
+'Ask again later',
+'Concentrate and ask again',
+'My reply is no',
+'Outlook not so good',
+'Very doubtful']
+print(messages[random.randint(0, len(messages) - 1)])
+Python 中缩进规则的例外
+在大多数情况下，代码行的缩进告诉 Python 它属于哪一个代码块。但是，
+这个规则有几个例外。例如在源代码文件中，列表实际上可以跨越几行。这些行
+的缩进并不重要。Python 知道，没有看到结束方括号，列表就没有结束。例如，
+代码可以看起来像这样：
+spam = ['apples',
+'oranges',
+'bananas',
+'cats']
+print(spam)
+当然，从实践的角度来说，大部分人会利用 Python 的行为，让他们的列表
+看起来漂亮且可读，就像神奇 8 球程序中的消息列表一样。
+也可以在行末使用续行字符\，将一条指令写成多行。可以把\看成是“这条
+指令在下一行继续”。\续行字符之后的一行中，缩进并不重要。例如，下面是有
+效的 Python 代码：
+print('Four score and seven ' + \
+'years ago...')
+如果希望将一长行的 Python 代码安排得更为可读，这些技巧是有用的。
+运行这个程序，你会看到它与前面的 magic8Ball.py 程序效果一样。
+请注意用作 messages 下标的表达式：random.randint(0, len(messages) - 1)。这产
+生了一个随机数作为下标，不论 messages 的大小是多少。也就是说，你会得到 0 与
+len(messages) - 1 之间的一个随机数。这种方法的好处在于，很容易向列表添加或删
+除字符串，而不必改变其他行的代码。如果稍后更新代码，就可以少改几行代码，
+引入缺陷的可能性也更小。

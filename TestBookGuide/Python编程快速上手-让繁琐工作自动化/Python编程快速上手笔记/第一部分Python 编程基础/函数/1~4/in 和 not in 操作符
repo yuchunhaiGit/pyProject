@@ -1,0 +1,12 @@
+利用 in 和 not in 操作符，可以确定一个值否在列表中。像其他操作符一样，in
+和 not in 用在表达式中，连接两个值：一个要在列表中查找的值，以及待查找
+的列表。这些表达式将求值为布尔值。在交互式环境中输入以下代码：
+>>> 'howdy' in ['hello', 'hi', 'howdy', 'heyas']
+True
+>>> spam = ['hello', 'hi', 'howdy', 'heyas']
+>>> 'cat' in spam
+False
+>>> 'howdy' not in spam
+False
+>>> 'cat' not in spam
+True

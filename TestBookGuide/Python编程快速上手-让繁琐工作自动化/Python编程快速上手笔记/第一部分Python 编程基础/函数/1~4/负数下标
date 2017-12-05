@@ -1,0 +1,10 @@
+虽然下标从 0 开始并向上增长，但也可以用负整数作为下标。整数值−1 指的是
+列表中的最后一个下标，−2 指的是列表中倒数第二个下标，以此类推。在交互式环
+境中输入以下代码：
+>>> spam = ['cat', 'bat', 'rat', 'elephant']
+>>> spam[-1]
+'elephant'
+>>> spam[-3]
+'bat'
+>>> 'The ' + spam[-1] + ' is afraid of the ' + spam[-3] + '.'
+'The elephant is afraid of the bat.'

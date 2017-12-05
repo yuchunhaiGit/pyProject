@@ -1,0 +1,7 @@
+虽然只有 if 或 else 子句会被执行，但有时候可能你希望，“许多”可能的子句
+中有一个被执行。elif 语句是“否则如果”，总是跟在 if 或另一条 elif 语句后面。它
+提供了另一个条件，仅在前面的条件为 False 时才检查该条件。
+if name == 'Alice':
+	print('Hi, Alice.')
+elif age < 12:
+	print('You are not Alice, kiddo.')
